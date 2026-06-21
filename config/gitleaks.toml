@@ -1,0 +1,49 @@
+[[rules]]
+id = "demo-aws-access-key"
+description = "Detect demo AWS access key"
+regex = '''(AKIA[A-Z2-7]{16})'''
+secretGroup = 1
+entropy = 0
+
+[[rules]]
+id = "demo-github-token"
+description = "Detect demo git token"
+regex = '''(git[A-Z2-7]{16})'''
+secretGroup = 1
+entropy = 0
+
+[[rules]]
+id = "demo-azure-access-key"
+description = "Detect demo AZURE access key"
+regex = '''(AZ[A-Z2-7]{16})'''
+secretGroup = 1
+entropy = 0
+
+[[rules]]
+id = "demo-db-password"
+description = "Detect demo db_password values"
+regex = '''db_password\s*=\s*([A-Za-z0-9_@#%+=./-]{3,})'''
+secretGroup = 1
+entropy = 0
+
+[[rules]]
+id = "demo-admin-password"
+description = "Detect demo admin_password values"
+regex = '''admin_password\s*=\s*([A-Za-z0-9_@#%+=./-]{3,})'''
+secretGroup = 1
+entropy = 0
+
+[[rules]]
+id = "demo-client-password"
+description = "Detect demo client_password values"
+regex = '''client_password\s*=\s*([A-Za-z0-9_@#%+=./-]{3,})'''
+secretGroup = 1
+entropy = 0
+
+[allowlist]
+description = "Exclude below paths"
+
+paths = [
+  '''artifacts/.*''',
+  '''.*\.viminfo$'''
+]

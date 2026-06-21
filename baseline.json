@@ -1,0 +1,8 @@
+[
+  {
+    "RuleID": "demo-db-password",
+    "File": "/appsec-takehome/testdata/known-secrets.env",
+    "Secret": "abc123456653",
+    "Reason": "Demo secret value"
+  }
+]
